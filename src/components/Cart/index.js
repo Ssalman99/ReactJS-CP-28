@@ -8,7 +8,7 @@ import './index.css'
 const Cart = () => {
   const jwtToken = Cookies.get('jwt_token')
   if (jwtToken === undefined) {
-    return <Redirect to="/cart" />
+    return <Redirect to="/login" />
   }
   return (
     <>

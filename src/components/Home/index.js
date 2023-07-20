@@ -1,14 +1,17 @@
-import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 
 import Header from '../Header'
+
 import './index.css'
 
 const Home = () => {
-  const jwtToken = Cookies.get('jwt_token')
-  if (jwtToken === undefined) {
+  const accessToken = Cookies.get('jwt_token')
+
+  if (accessToken === undefined) {
     return <Redirect to="/login" />
   }
+
   return (
     <>
       <Header />

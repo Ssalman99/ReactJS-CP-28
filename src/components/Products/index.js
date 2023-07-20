@@ -9,7 +9,7 @@ import './index.css'
 const Products = () => {
   const jwtToken = Cookies.get('jwt_token')
   if (jwtToken === undefined) {
-    return <Redirect to="/products" />
+    return <Redirect to="/login" />
   }
   return (
     <>
